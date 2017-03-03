@@ -1,5 +1,5 @@
 {% macro warnings_and_loader() -%}
-  <div id="skiptocontent" ng-cloak>
+  <div id="blk-content" ng-cloak>
     <div class="oppia-toast-container toast-top-center">
       <div ng-repeat="warning in (alertsService.warnings | limitTo:5) track by $index" class="toast toast-warning oppia-toast">
         <button type="button" class="toast-close-button" ng-click="alertsService.deleteWarning(warning)" role="button">&times;</button>
@@ -130,7 +130,7 @@
     {% if iframed %}
       {{ warnings_and_loader() }}
     {% else %}
-    <div id="skiptocontent"><a ng-href="#skiptocontent">Skip to Main Content</a></div>
+    <div id="skiptocontent"><a href="#blk-content">Skip to Main Content</a></div>
       <div class="oppia-base-container"
            ng-class="{'oppia-sidebar-menu-open': isSidebarShown(), 'oppia-sidebar-menu-closed': !isSidebarShown()}"
            ng-swipe-left="closeSidebarOnSwipe()">
