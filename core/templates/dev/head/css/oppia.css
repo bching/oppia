@@ -119,6 +119,33 @@ body {
   width: 100%;
 }
 
+#skiptocontent a {
+  left: -10000px;
+  padding: 6px;
+  position: absolute;
+  top: auto;
+  transition-duration: 1s;
+  transition-property: color left;
+  transition-timing-function: ease-in;
+  z-index: 99999;
+}
+
+#skiptocontent a:focus {
+  background-color: #e8e7e3;
+  border-bottom: 1px solid black;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid black;
+  color: #23527e;
+  height: auto;
+  left: 0;
+  position: absolute;
+  transition-duration: .5s;
+  transition-property: color left;
+  transition-timing-function: ease-out;
+  width: auto;
+  /*z-index: 99999;*/
+}
+
 .oppia-stop-scroll {
   overflow-y: hidden;
 }
@@ -837,6 +864,8 @@ textarea {
 
 .navbar-default .navbar-container {
   background: #009688;
+
+
   height: 56px;
 }
 
