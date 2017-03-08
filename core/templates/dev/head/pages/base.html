@@ -130,7 +130,7 @@
     {% if iframed %}
       {{ warnings_and_loader() }}
     {% else %}
-    <div id="skiptocontent"><a href="#blk-content">Skip to Main Content</a></div>
+    <div role="button" tabindex="0" ng-click="utilsService.skipTo($event)" id="skiptocontent" data-link="blk-content">Skip to Main Content</div>
       <div class="oppia-base-container"
            ng-class="{'oppia-sidebar-menu-open': isSidebarShown(), 'oppia-sidebar-menu-closed': !isSidebarShown()}"
            ng-swipe-left="closeSidebarOnSwipe()">

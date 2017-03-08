@@ -31,6 +31,15 @@ oppia.factory('utilsService', [function() {
     // http://stackoverflow.com/questions/203739
     isString: function(input) {
       return (typeof input === 'string' || input instanceof String);
+    },
+
+    skipTo: function($event) {
+      var link = $event.target.dataset.link;
+      if (document.getElementById(link)) {
+        document.getElementById(link).tabIndex = -1;
+        document.getElementById(link).scrollIntoView();
+        document.getElementById(link).focus();
+      }
     }
   };
   return utils;

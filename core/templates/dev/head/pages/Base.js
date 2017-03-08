@@ -18,9 +18,13 @@
 
 oppia.controller('Base', [
   '$scope', '$rootScope', '$document', 'alertsService', 'SidebarStatusService',
-  function($scope, $rootScope, $document, alertsService, SidebarStatusService) {
+  'utilsService',
+  function(
+      $scope, $rootScope, $document, alertsService, SidebarStatusService,
+      utilsService) {
     $scope.alertsService = alertsService;
     $scope.currentLang = 'en';
+    $scope.utilsService = utilsService;
 
     $rootScope.DEV_MODE = GLOBALS.DEV_MODE;
     // If this is nonempty, the whole page goes into 'Loading...' mode.
