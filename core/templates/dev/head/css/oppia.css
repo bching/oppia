@@ -130,9 +130,9 @@ body {
   z-index: 99999;
 }
 
-#skiptocontent:active,
-#skiptocontent:focus,
-#skiptocontent:hover {
+/*#skiptocontent:active,
+#skiptocontent:hover,*/
+#skiptocontent:focus {
   background-color: #e8e7e3;
   border-bottom: 1px solid black;
   border-bottom-right-radius: 5px;

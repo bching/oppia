@@ -34,7 +34,7 @@ oppia.factory('utilsService', [function() {
     },
 
     skipTo: function($event) {
-      var link = $event.target.dataset.link;
+      var link = $event.target.href.split('#');
       if (document.getElementById(link)) {
         document.getElementById(link).tabIndex = -1;
         document.getElementById(link).scrollIntoView();
